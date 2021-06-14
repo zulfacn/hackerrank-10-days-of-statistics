@@ -1,0 +1,17 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+#library
+import math
+
+#input
+n = float(input())
+mean = float(input())
+std = float(input())
+percentage_ci = float(input())
+value_ci = float(input())
+
+#ci formula
+ci = value_ci * (std / math.sqrt(n))
+
+#output
+print(round(mean - ci, 2))
+print(round(mean + ci, 2))
