@@ -1,0 +1,20 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+#library
+import math
+
+#function
+def cumulative(mean, std, value):
+    return 0.5 * (1 + math.erf((value - mean) / (std * (2 ** 0.5))))
+
+#input
+tickets = float(input())
+student = float(input())
+mean = float(input())
+std = float(input())
+
+new_mean = mean * student
+new_std = math.sqrt(student) * std
+
+#output
+print(round(cumulative(new_mean, new_std, tickets), 4))
